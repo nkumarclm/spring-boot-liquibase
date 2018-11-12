@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: palm
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: info, health, prometheus, metrics, threaddump, heapdump, env
+
+spring:
+    datasource:
+        url: jdbc:oracle:thin:@localhost:1521:xe
+        username: PALM_LOCAL
+        password: PALM_LOCAL
+        driver-class-name: oracle.jdbc.OracleDriver
